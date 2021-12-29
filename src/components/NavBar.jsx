@@ -1,5 +1,4 @@
 import React from 'react'
-import CardWidget from './components/CardWidget';
 
 function NavBar() {
     return (
@@ -30,10 +29,7 @@ function NavBar() {
               </li>
             </ul>
           </div>
-        </div>
-        <div>
-            <img CardWidget/>
-        </div>
+        </div> 
       </nav>
     )
 }

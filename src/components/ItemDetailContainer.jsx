@@ -1,4 +1,5 @@
-import React from 'react'
+
+import {llamado} from './ItemDetail'
 
 function ItemDetailContainer() {
     return (

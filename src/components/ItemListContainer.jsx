@@ -1,5 +1,5 @@
-import React from 'react'
-import { llamado } from './Items'
+
+import {llamado} from './Items'
 
 function ItemListContainer() {
     return (

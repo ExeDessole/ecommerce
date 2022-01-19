@@ -1,4 +1,3 @@
-import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar';
@@ -13,15 +12,17 @@ function App() {
   return (
     <BrowserRouter>
         <NavBar/>
-          <Routes>         
-            <Route exact path='/item' element={<ItemListContainer saludo= 'Hola'/>}/>
+        <ItemListContainer/>
+          {/* <Routes>         
+            <Route exact path='/' element={<ItemListContainer saludo= 'Hola'/>}/>
             <Route exact path='/detalle/:idDetalle' element={<ItemDetailContainer/>}/>
             <Route exact path='/cart' element={<Card/>}/>
-            <ItemCount/>
+            <Route exact path='/ItemCount' element={<ItemCount/>}/>
+            
           </Routes> 
-      
+       */}
     </BrowserRouter>
-    
+     
   );
 }
 

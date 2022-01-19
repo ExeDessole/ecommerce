@@ -1,15 +1,13 @@
-
-import {llamado} from './Items'
+import { useState, useEffect } from 'react'
+import ItemList from './ItemList'
 
 function ItemListContainer() {
+
+    console.log('soy promesa')
     return (
-
-        llamado.then(resp=> {
-            return{...resp,id:1}
-        })
-        .then(resp=> console.log(resp))
-        .catch(err=> console.log(err))
-
+        <div>
+            
+        </div>
     )
 }
 

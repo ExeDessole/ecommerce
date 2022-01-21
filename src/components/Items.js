@@ -1,9 +1,9 @@
-// import imagenes from './imagenes'
+import imagenes from './imagenes/galeria'
 
 const itemList= [
-    {id:1, foto: './imagenes/botellas.jpg'} ,
-    {id:2, foto: './imagenes/jabon.png'} , 
-    {id:3, foto: './imagenes/paperBox.jpg'}
+    {id:1, foto: imagenes[0] },
+    {id:2, foto: imagenes[1] }, 
+    {id:3, foto: imagenes[2] }
 ];
 
 export const llamado= new Promise ((resolve, reject)=>{

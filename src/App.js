@@ -1,11 +1,8 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css';
-import NavBar from './components/NavBar';
-import imagenes from './components/imagenes/galeria.'
 import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import Card from './Card';
+import NavBar from './components/NavBar';
+
 
 
 function App() {
@@ -14,15 +11,14 @@ function App() {
     <BrowserRouter>
         <NavBar/>
         <ItemListContainer/>
-        <img src= {imagenes[0]}/>
-          {/* <Routes>         
+{/*         
+          <Routes>         
             <Route exact path='/' element={<ItemListContainer saludo= 'Hola'/>}/>
-            <Route exact path='/detalle/:idDetalle' element={<ItemDetailContainer/>}/>
-            <Route exact path='/cart' element={<Card/>}/>
-            <Route exact path='/ItemCount' element={<ItemCount/>}/>
+            <Route exact path='/' element={<NavBar/>}/>
             
-          </Routes> 
-       */}
+            
+          </Routes>  */}
+      
     </BrowserRouter>
      
   );

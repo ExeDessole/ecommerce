@@ -1,11 +1,11 @@
-import imagenes from './imagenes/logo.png'
+import img from './imagenes/galeria'
 
 function NavBar() {
     return (
         
         <nav className="navbar navbar-expand-lg navbar-white bg-">
         <div className="container-fluid">
-          <img className="logo" src={imagenes} alt="Imagen de logo Verde Boreal" />
+          <img className="logo" src={img[4]} alt="Imagen de logo Verde Boreal" />
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

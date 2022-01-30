@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 
@@ -11,6 +12,7 @@ function App() {
     <BrowserRouter>
         <NavBar/>
         <ItemListContainer/>
+        <ItemDetailContainer/>
 {/*         
           <Routes>         
             <Route exact path='/' element={<ItemListContainer saludo= 'Hola'/>}/>

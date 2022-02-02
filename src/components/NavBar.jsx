@@ -1,35 +1,66 @@
-import img from './imagenes/galeria'
+import {Link} from 'react-router-dom'
+import Widget from './Widget'
+import Carrito from './Carrito'
+
 
 function NavBar() {
     return (
         
-        <nav className="navbar navbar-expand-lg navbar-white bg-">
-        <div className="container-fluid">
-          <img className="logo" src={img[4]} alt="Imagen de logo Verde Boreal" />
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="./imagenes/botellas.jpg">Cremas</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./imagenes/botellas.jpg">Jabones</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="./imagenes/botellas.jpg">Aceites</a>
-              </li>
-              <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="./imagenes/botellas.jpg" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Para el pelo</a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="./imagenes/botellas.jpg">Shampoo</a></li>
-                        <li><a className="dropdown-item" href="./imagenes/botellas.jpg">Acondicionador</a></li>  
-                    </ul>
-              </li>
-            </ul>
+      <nav className="navbar navbar-expand-lg navbar-white bg-">
+          <div className="container-fluid">
+            <Link to= './'> <Widget/> </Link>              
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+
+              <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                      <Link to= './productos/Cremas'>
+                      <a className="nav-link active" aria-current="page">Cremas</a>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to= './productos/Jabones'>
+                      <a className="nav-link">Jabones</a>  
+                      </Link>                      
+                    </li>
+                    <li className="nav-item">
+                      <Link to= './productos/Aceites'>
+                      <a className="nav-link">Aceites</a>  
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to='./productos/Shampoo'>
+                      <a className="nav-link">Shampoo</a>
+                      </Link>                                
+                    </li>
+                    <li className="nav-item">
+                      <Link to='./productos/Acondicionador'>
+                      <a className="nav-link">Acondicionador</a>
+                      </Link>                                
+                    </li>
+
+                    {/* <li className="nav-item dropdown">
+                          <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Para el pelo</a>
+                          <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li>
+                                <Link to='./productos/Shampoo'>
+                                <a className="dropdown-item">Shampoo</a>
+                                </Link>                                
+                              </li>
+                              <li>
+                                <Link to='./productos/Acondicionador'>
+                                <a className="dropdown-item">Acondicionador</a>
+                                </Link>                                
+                              </li>  
+                          </ul>
+                    </li> */}
+                </ul>
+              </div>
+              <Carrito/>
           </div>
-        </div> 
+           
       </nav>
     )
 }

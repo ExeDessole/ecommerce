@@ -1,7 +1,7 @@
 import {useState,useEffect} from 'react'
 import {llamado} from './Mock'
 import Items from './Items'
-import { useParams } from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
 function ItemList() {
     const [productos,setProductos]= useState([])

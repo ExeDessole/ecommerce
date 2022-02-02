@@ -30,32 +30,19 @@ function NavBar() {
                       <a className="nav-link">Aceites</a>  
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link to='./productos/Shampoo'>
-                      <a className="nav-link">Shampoo</a>
-                      </Link>                                
-                    </li>
-                    <li className="nav-item">
-                      <Link to='./productos/Acondicionador'>
-                      <a className="nav-link">Acondicionador</a>
-                      </Link>                                
-                    </li>
-
-                    {/* <li className="nav-item dropdown">
-                          <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Para el pelo</a>
-                          <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li>
-                                <Link to='./productos/Shampoo'>
-                                <a className="dropdown-item">Shampoo</a>
-                                </Link>                                
-                              </li>
-                              <li>
-                                <Link to='./productos/Acondicionador'>
-                                <a className="dropdown-item">Acondicionador</a>
-                                </Link>                                
-                              </li>  
-                          </ul>
-                    </li> */}
+                    <div classname="dropdown nav-link">
+                      <button className="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Para el cabello...
+                      </button>
+                      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <Link to='./productos/Shampoo'>
+                        <a className="dropdown-item">Shampoo</a>
+                        </Link>
+                        <Link to='./productos/Acondicionador'>
+                        <a className="dropdown-item">Acondicionador</a>
+                        </Link>
+                      </div>
+                    </div>
                 </ul>
               </div>
               <Carrito/>

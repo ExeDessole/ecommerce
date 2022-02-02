@@ -7,19 +7,19 @@ import { useParams } from 'react-router-dom'
 
 function ItemDetailContainer() {
     const [productos, setProductos]= useState({})
-    const {idDetail}= useParams()
+    const {idId}= useParams()
 
     useEffect(()=>{
-        if (idDetail) {
+        if (idId) {
             llamado
-            .then(resp=> setProductos(resp.filter(prod=> prod.detail === idDetail)))
+            .then(resp=> setProductos(resp.filter(prod=> prod.id === idId)))
             .catch(err=> console.log(err)) 
         } else {
             llamado
             .then(resp=> setProductos(resp))
             .catch(err=> console.log(err))
         }
-    },[idDetail])
+    },[idId])
 
     return (
         <div>
@@ -27,5 +27,5 @@ function ItemDetailContainer() {
         </div>
     )    
 }
-console.log(ItemDetail)
+
 export default ItemDetailContainer

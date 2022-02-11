@@ -11,8 +11,9 @@ function ItemDetailContainer() {
 
     useEffect(()=>{
         if (idId) {
-            llamado
-            .then(resp=> setProductos(resp.filter(prod=> prod.id === idId)))
+            llamado 
+            // .then(resp=> setProductos(resp.filter(prod=> prod.id === idId)))
+            .then(resp => resp.filter(prod=> console.log(prod)))
             .catch(err=> console.log(err)) 
         } else {
             llamado

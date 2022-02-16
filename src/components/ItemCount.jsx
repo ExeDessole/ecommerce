@@ -1,17 +1,30 @@
 import {useState} from 'react'
 
-function ItemCount() {
+function ItemCount({onAdd}) {
     const [count, setCount]= useState(0);
+    console.log(count)
+   
+    const sumar=()=>{
 
-    const handleCount=()=>{
-        setCount(count+1);
+        setCount(count+1)
+        
+    };
+    const restar=(e)=>{
+        if (count >= 1) {
+            setCount(count-1);
+        } else {
+          e.preventDefault()  
+        }     
     };
     return (
-        <div>
-            <h2>Soy el contador</h2>
-            {count}
-            <button onClick={handleCount}>+</button>
-        </div>
+        <center>
+            <button type="button" className="btn btn-outline-dark" onClick={restar}>-</button>
+            <div className="btn btn-outline-dark">{count}</div>
+            
+            <button type="button" className="btn btn-outline-dark" onClick={sumar}>+</button>
+            <hr/>
+            <button type="button" className="btn btn-primary" onClick={()=>onAdd(count)} disabled={count < 1 && 'disabled'}>Agregar al carrito</button>       
+        </center>
     )
 }
 

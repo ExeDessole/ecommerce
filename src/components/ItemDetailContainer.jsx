@@ -1,9 +1,7 @@
-
-import {useState} from 'react'
-import {useEffect} from 'react'
+import {useState,useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 import {llamado} from './Mock'
 import ItemDetail from './ItemDetail'
-import { useParams } from 'react-router-dom'
 
 function ItemDetailContainer() {
     const [productos, setProductos]= useState({})
@@ -12,8 +10,7 @@ function ItemDetailContainer() {
     useEffect(()=>{
         if (idId) {
             llamado 
-            // .then(resp=> setProductos(resp.filter(prod=> prod.id === idId)))
-            .then(resp => resp.filter(prod=> console.log(prod)))
+            .then(resp => setProductos(resp.find(prod => prod.id === idId)))
             .catch(err=> console.log(err)) 
         } else {
             llamado
@@ -23,9 +20,9 @@ function ItemDetailContainer() {
     },[idId])
 
     return (
-        <div>
+        <center>
           <ItemDetail prod= {productos}/>
-        </div>
+        </center>
     )    
 }
 

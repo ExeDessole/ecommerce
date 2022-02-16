@@ -1,1 +1,0 @@
-const icono= "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Ficonos-gratis%2Fcarrito-compras_886348.htm&psig=AOvVaw1mlOP5gPCP4BXhuAUabioM&ust=1640400226930000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDQ9Zi1-_QCFQAAAAAdAAAAABAD"

@@ -5,10 +5,9 @@ function ItemCount({onAdd}) {
     console.log(count)
    
     const sumar=()=>{
-
-        setCount(count+1)
-        
+        setCount(count+1)        
     };
+
     const restar=(e)=>{
         if (count >= 1) {
             setCount(count-1);

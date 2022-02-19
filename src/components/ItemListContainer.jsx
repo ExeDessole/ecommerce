@@ -2,6 +2,7 @@ import ItemList from "./ItemList"
 import {useState,useEffect} from 'react'
 import {llamado} from './Mock'
 import {useParams} from 'react-router-dom'
+import Loading from "./Loading"
 
 function ItemListContainer() {
     const [productos,setProductos]= useState([])
@@ -24,7 +25,7 @@ function ItemListContainer() {
   
     return (
         <center className="row" style={{gap:'1.5rem'}}>
-            {loading ? <h2>Cargando...</h2> : <ItemList productos={productos}/>}
+            {loading ? <Loading/> : <ItemList productos={productos}/>}
         </center>       
     )
 }

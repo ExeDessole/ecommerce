@@ -4,7 +4,7 @@ function ItemList({productos}) {
    
     return (
         <>
-        {productos.map(prod =><Items key= {prod.id} card= {prod}/>)}
+        {productos.map(productos =><Items key= {productos.id} card= {productos}/>)}
         </>
     )
 }

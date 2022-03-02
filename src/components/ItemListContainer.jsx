@@ -1,8 +1,9 @@
 import ItemList from "./ItemList"
 import {useState,useEffect} from 'react'
-import {llamado} from './Mock'
 import {useParams} from 'react-router-dom'
 import Loading from "./Loading"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
+
 
 function ItemListContainer() {
     const [productos,setProductos]= useState([])
@@ -10,15 +11,20 @@ function ItemListContainer() {
     const {idCategoria}= useParams()
 
     useEffect(()=>{
+        
         if (idCategoria) {
-            llamado
-            .then(resp=> setProductos(resp.filter(prod=> prod.categoria === idCategoria)))
-            .catch(err=> console.log(err))
+            const db= getFirestore()
+            const queryCollection= query(collection(db, 'productos'), where('categoria' ,'==', idCategoria ))
+            getDocs(queryCollection)
+            .then(res=> setProductos(res.docs.map(prod=>({id: prod.id, ...prod.data()}))))
+            // .catch(err=> console.log(err))
             .finally(()=> setLoading(false)) 
         } else {
-            llamado
-            .then(resp=> setProductos(resp))
-            .catch(err=> console.log(err))
+            const db= getFirestore()
+            const queryCollection= collection(db, 'productos')
+            getDocs(queryCollection)
+            .then(res=> setProductos(res.docs.map(prod=>({id: prod.id, ...prod.data()}))))
+            // .catch(err=> console.log(err))
             .finally(()=> setLoading(false))
         }
     },[idCategoria])

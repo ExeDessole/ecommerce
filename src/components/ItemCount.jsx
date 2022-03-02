@@ -1,8 +1,7 @@
 import {useState} from 'react'
 
 function ItemCount({onAdd}) {
-    const [count, setCount]= useState(0);
-    console.log(count)
+    const [count, setCount]= useState(1);
    
     const sumar=()=>{
         setCount(count+1)        

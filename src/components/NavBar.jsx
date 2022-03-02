@@ -41,7 +41,7 @@ function NavBar() {
             </div>
           </ul>
         </div>
-        <Link to='/card'>
+        <Link to='/cart'>
         <Carrito/>
         </Link>
       </div>           
